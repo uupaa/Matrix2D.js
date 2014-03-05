@@ -1,0 +1,31 @@
+{
+  "name":           "uupaa.matrix2d.js",
+  "version":        "0.8.0",
+  "description":    "Matrix 2D",
+  "url":            "https://github.com/uupaa/Matrix2D.js",
+  "keywords":       ["Matrix2D", "util", "uupaa"],
+  "repository": {
+    "type":         "git",
+    "url":          "https://github.com/uupaa/Matrix2D.js.git"
+  },
+  "scripts": {
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build ./lib/Matrix2D.js",
+    "build":        "node node_modules/uupaa.minify.js --keep --output ./lib/Matrix2D.min.js ./lib/Matrix2D.js",
+    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html",
+    "lint":         "plato --title Matrix2D.js --jshint .jshintrc -d lint/plato lib/Matrix2D.js; open lint/plato/index.html"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "uupaa.help.js":    "",
+    "uupaa.task.js":    "",
+    "uupaa.test.js":    "",
+    "uupaa.watch.js":   "",
+    "uupaa.minify.js":  ""
+  },
+  "lib":            "./lib/",
+  "main":           "./index.js",
+  "author":         "uupaa <uupaa.js@gmail.com>",
+  "license":        "MIT",
+  "contributors":   []
+}
