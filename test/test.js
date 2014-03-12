@@ -128,10 +128,10 @@ new Test().add([
 
     ]).run().worker(function(err, test) {
         if (!err && typeof Matrix2D_ !== "undefined") {
-            var undo = Test.swap(Matrix2D, Matrix2D_);
+            var name = Test.swap(Matrix2D, Matrix2D_);
 
             new Test(test).run(function(err, test) {
-                Test.undo(undo);
+                Test.undo(name);
             });
         }
     });
