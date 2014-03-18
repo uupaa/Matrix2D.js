@@ -126,12 +126,16 @@ new Test().add([
         testMatrix2D_translate2,
         testMatrix2D_transform,
 
-    ]).run().worker(function(err, test) {
-        if (!err && typeof Matrix2D_ !== "undefined") {
-            var name = Test.swap(Matrix2D, Matrix2D_);
+    ]).run(function(err, test) {
+        if (1) {
+            err || test.worker(function(err, test) {
+                if (!err && typeof Matrix2D_ !== "undefined") {
+                    var name = Test.swap(Matrix2D, Matrix2D_);
 
-            new Test(test).run(function(err, test) {
-                Test.undo(name);
+                    new Test(test).run(function(err, test) {
+                        Test.undo(name);
+                    });
+                }
             });
         }
     });
