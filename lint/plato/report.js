@@ -12,52 +12,52 @@ __report = {
       },
       "complexity": {
         "aggregate": {
-          "line": 4,
+          "line": 5,
           "complexity": {
             "sloc": {
-              "physical": 175,
-              "logical": 63
+              "physical": 174,
+              "logical": 62
             },
             "cyclomatic": 7,
             "halstead": {
               "operators": {
                 "distinct": 18,
-                "total": 218,
+                "total": 216,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
-                "distinct": 97,
-                "total": 321,
+                "distinct": 96,
+                "total": 318,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 539,
-              "vocabulary": 115,
-              "difficulty": 29.783505154639172,
-              "volume": 3689.7191374590184,
-              "effort": 109892.76894968147,
-              "bugs": 1.229906379153006,
-              "time": 6105.15383053786
+              "length": 534,
+              "vocabulary": 114,
+              "difficulty": 29.8125,
+              "volume": 3648.7632675639725,
+              "effort": 108778.75491425092,
+              "bugs": 1.216254422521324,
+              "time": 6043.264161902829
             },
             "params": 15
           }
         },
         "module": "lib/Matrix2D.js",
-        "maintainability": 67.33149166589126
+        "maintainability": 67.5208478950375
       }
     }
   ],
   "summary": {
     "total": {
-      "sloc": 175,
-      "maintainability": 67.33149166589126
+      "sloc": 174,
+      "maintainability": 67.5208478950375
     },
     "average": {
-      "sloc": 175,
-      "maintainability": "67.33"
+      "sloc": 174,
+      "maintainability": "67.52"
     }
   }
 }
