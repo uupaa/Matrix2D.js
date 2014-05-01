@@ -1,3 +1,5 @@
+var ModuleTest = (function(global) {
+
 function createSVGMatrix(m) { // @arg Object { a,b,c,d,e,f }
 
     if (typeof document === "undefined" ||
@@ -115,8 +117,16 @@ FakeMatrix.prototype = {
 };
 
 // ------------------------------------------------------------
-
-new Test().add([
+return new Test({
+        disable:    false,
+        node:       true,
+        browser:    true,
+        worker:     true,
+        button:     true,
+        both:       true,
+        primary:    global["Matrix2D"],
+        secondary:  global["Matrix2D_"],
+    }).add([
         testMatrix2D,
         testMatrix2D_identity,
         testMatrix2D_multiply,
@@ -125,20 +135,8 @@ new Test().add([
         testMatrix2D_translate,
         testMatrix2D_translate2,
         testMatrix2D_transform,
+    ]).run().clone();
 
-    ]).run(function(err, test) {
-        if (1) {
-            err || test.worker(function(err, test) {
-                if (!err && typeof Matrix2D_ !== "undefined") {
-                    var name = Test.swap(Matrix2D, Matrix2D_);
-
-                    new Test(test).run(function(err, test) {
-                        Test.undo(name);
-                    });
-                }
-            });
-        }
-    });
 
 function testMatrix2D(next) {
 
@@ -280,4 +278,6 @@ function testMatrix2D_transform(next) {
     console.log("testMatrix2D_transform ng");
     next && next.miss();
 }
+
+})((this || 0).self || global);
 

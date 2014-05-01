@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.matrix2d.js",
-  "version":        "0.8.9",
+  "version":        "0.8.10",
   "description":    "Matrix 2D",
   "url":            "https://github.com/uupaa/Matrix2D.js",
   "keywords":       ["Matrix2D", "util", "uupaa", "WebModule"],
