@@ -1,4 +1,4 @@
-var ModuleTest = (function(global) {
+var ModuleTestMatrix2D = (function(global) {
 
 function createSVGMatrix(m) { // @arg Object { a,b,c,d,e,f }
 
@@ -117,15 +117,13 @@ FakeMatrix.prototype = {
 };
 
 // ------------------------------------------------------------
-return new Test({
+return new Test("Matrix2D", {
         disable:    false,
-        node:       true,
         browser:    true,
         worker:     true,
+        node:       true,
         button:     true,
         both:       true,
-        primary:    global["Matrix2D"],
-        secondary:  global["Matrix2D_"],
     }).add([
         testMatrix2D,
         testMatrix2D_identity,
@@ -141,10 +139,8 @@ return new Test({
 function testMatrix2D(next) {
 
     if (true) {
-        console.log("testMatrix2D ok");
         next && next.pass();
     } else {
-        console.log("testMatrix2D ng");
         next && next.miss();
     }
 }
@@ -153,10 +149,8 @@ function testMatrix2D_identity(next) {
     var result = Matrix2D.identity();
 
     if (result.join() === "1,0,0,0,1,0,0,0,1") {
-        console.log("testMatrix2D_identity ok");
         next && next.pass();
     } else {
-        console.log("testMatrix2D_identity ng");
         next && next.miss();
     }
 }
@@ -172,12 +166,10 @@ function testMatrix2D_multiply(next) {
 
     if ( isMatch(result2, result3) ) {
         if ( isMatch(result1, result2) ) {
-            console.log("testMatrix2D_multiply ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testMatrix2D_multiply ng");
     next && next.miss();
 }
 
@@ -190,12 +182,10 @@ function testMatrix2D_scale(next) {
 
     if ( isMatch(result2, result3) ) {
         if ( isMatch(result1, result2) ) {
-            console.log("testMatrix2D_scale ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testMatrix2D_scale ng");
     next && next.miss();
 }
 
@@ -215,12 +205,10 @@ function testMatrix2D_rotate(next) {
 
     if ( isMatch(result2, result3) ) {
         if ( isMatch(result1, result2) ) {
-            console.log("testMatrix2D_rotate ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testMatrix2D_rotate ng");
     next && next.miss();
 }
 
@@ -233,12 +221,10 @@ function testMatrix2D_translate(next) {
 
     if ( isMatch(result2, result3) ) {
         if ( isMatch(result1, result2) ) {
-            console.log("testMatrix2D_translate ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testMatrix2D_translate ng");
     next && next.miss();
 }
 
@@ -251,12 +237,10 @@ function testMatrix2D_translate2(next) {
 
     if ( isMatch(result2, result3) ) {
         if ( isMatch(result1, result2) ) {
-            console.log("testMatrix2D_translate2 ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testMatrix2D_translate2 ng");
     next && next.miss();
 }
 
@@ -270,12 +254,10 @@ function testMatrix2D_transform(next) {
 
     if ( isMatch(result2, result3) ) {
         if ( isMatch(result1, result2) ) {
-            console.log("testMatrix2D_transform ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testMatrix2D_transform ng");
     next && next.miss();
 }
 
