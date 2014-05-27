@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.matrix2d.js",
-  "version":        "0.8.11",
+  "version":        "0.8.12",
   "description":    "Matrix 2D",
   "url":            "https://github.com/uupaa/Matrix2D.js",
   "keywords":       ["Matrix2D", "util", "uupaa", "WebModule"],
@@ -24,6 +24,7 @@
     "files":        ["lib/Matrix2D.js"],
     "output":       "release/Matrix2D.min.js",
     "target":       ["all"],
+    "labels":       ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
       "release":    []
@@ -32,6 +33,7 @@
   "dependencies": {
   },
   "devDependencies": {
+    "uupaa.reflection.js": "",
     "uupaa.nodemodule.js": "",
     "uupaa.console.js": "",
     "uupaa.valid.js":   "",
