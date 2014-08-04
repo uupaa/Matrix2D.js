@@ -3,7 +3,7 @@
   "version":        "0.8.12",
   "description":    "Matrix 2D",
   "url":            "https://github.com/uupaa/Matrix2D.js",
-  "keywords":       ["Matrix2D", "util", "uupaa", "WebModule"],
+  "keywords":       ["Matrix2D", "util", "uupaa", "WebModule", "Unstable"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/uupaa/Matrix2D.js.git"
@@ -18,13 +18,18 @@
     "test-debug":   "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/index.node.js",
     "test-node":    "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
     "test-browser": "open test/index.html",
+    "test-sim":     "node node_modules/uupaa.iphonesimulator.js --run --port 8585 --xcache --open test/index.html",
+    "server":       "http-server -c-1 -p 8585 &",
+    "server-stop":  "",
+    "server-kill":  "killall -- node /usr/local/bin/http-server -p 8585 ; exit 0",
+    "hint":         "jshint lib/*.js",
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
-    "files":        ["lib/Matrix2D.js"],
+    "source":       ["lib/Matrix2D.js"],
     "output":       "release/Matrix2D.min.js",
     "target":       ["all"],
-    "labels":       ["@dev"],
+    "label":        ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
       "release":    []
@@ -33,8 +38,9 @@
   "dependencies": {
   },
   "devDependencies": {
-    "uupaa.reflection.js": "",
     "uupaa.nodemodule.js": "",
+    "uupaa.reflection.js": "",
+    "uupaa.iphonesimulator.js": "",
     "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",

@@ -14,7 +14,7 @@ onmessage = function(event) {
     importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.test.js/lib/Test.js");
     importScripts(MESSAGE.BASE_DIR + "../lib/Matrix2D.js");
     importScripts(MESSAGE.BASE_DIR + "../release/Matrix2D.min.js");
-    importScripts(MESSAGE.BASE_DIR + "./test.js");
+    importScripts(MESSAGE.BASE_DIR + "./test.js?_=1407175116665");
 
     self.postMessage({ error: self.errorMessage || "" });
 };
@@ -28,6 +28,6 @@ onmessage = function(event) {
 <script src="../node_modules/uupaa.test.js/lib/Test.js"></script>
 <script src="../lib/Matrix2D.js"></script>
 <script src="../release/Matrix2D.min.js"></script>
-<script src="./test.js"></script>
+<script src="./test.js?=_1407175116665"></script>
 
 </body></html>
